@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { createContext } from 'react';
 import './App.css';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import HomeLayout from './components/layouts/HomeLayout';
 import Accounts from './components/pages/accounts/Accounts';
@@ -12,7 +12,10 @@ import Header from './components/html-components/header/header';
 import Account from './components/pages/accounts/[id]';
 import Transaction from './components/pages/transactions/[id]';
 
+
 function App() {
+
+
   return (
     <div >
       <BrowserRouter>
@@ -31,6 +34,7 @@ function App() {
       </BrowserRouter>
       <Footer />
     </div>
+
   );
 }
 
