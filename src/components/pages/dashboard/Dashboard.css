@@ -1,0 +1,12 @@
+.carasoul-center{
+    align-items: center;
+    
+}
+
+.carasoul-center-img{
+    transform: translateX(70%);
+}
+
+.c1-color{
+    color: black;
+}
