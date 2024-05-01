@@ -6,7 +6,7 @@ function NavAdmin() {
     <div>
         <nav>
           <ul>
-              <li><Link to="/">Admin Home Page</Link></li>
+              <li><Link to="/">DPJ Banking</Link></li>
               <li><Link to="register">Create your account</Link></li>
               <li><Link to="login">Login</Link></li>
           </ul>
