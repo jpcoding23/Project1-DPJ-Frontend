@@ -1,35 +1,40 @@
 import React, { createContext } from 'react';
 import './App.css';
-import NavAdmin from './ComponentP1/NavAdmin/NavAdmin';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AdminHomePage from './ComponentP1/AdminHomePage/AdminHomePage';
-import CreateAdminAcct from './ComponentP1/CreateAdminAcct/CreateAdminAcct';
-import LoginAdmin from './ComponentP1/LoginAdmin/LoginAdmin';
-import DashboardAdmin from './ComponentP1/DashboardAdmin/DashboardAdmin';
-import ManageUsers from './ComponentP1/ManageUsers/ManageUsers';
-import ManageAccounts from './ComponentP1/ManageAccounts/ManageAccounts';
+import HomeLayout from './components/layouts/HomeLayout';
+import Accounts from './components/pages/accounts/Accounts';
+import Transfer from './components/pages/transactions/Transfer';
+import Dashboard from './components/pages/dashboard/Dashboard';
+import Head from './components/html-components/head/Head';
+import Footer from './components/html-components/footer/Footer';
+import Header from './components/html-components/header/header';
+import Account from './components/pages/accounts/[id]';
+import Transaction from './components/pages/transactions/[id]';
 
-
-export const hiddenValueContext = createContext(29)
 
 function App() {
 
 
   return (
-    <>     
-      <BrowserRouter>     
-        <NavAdmin></NavAdmin>
-        <h1>Best Bank</h1>
+    <div >
+      <BrowserRouter>
         <Routes>
-          <Route path='/' element={<AdminHomePage />}></Route>
-          <Route path='/register' element={<CreateAdminAcct />}></Route>
-          <Route path='/login' element={<LoginAdmin />}></Route>
-          <Route path='/dashboardadmin' element={<DashboardAdmin />}></Route>
-          <Route path='/manageusers' element={<ManageUsers />}></Route>
-          <Route path='/Manageaccounts' element={<ManageAccounts />}></Route>
+          <Route path='/' element={<HomeLayout children={<Dashboard />}/>}></Route>
+          {/* <Route path='/logout' element={<Logout />}></Route>
+          <Route path='/users' element={<User />}></Route> */}
+          <Route path='/dashboard' element={<HomeLayout children={<Dashboard />}/>}></Route>
+          <Route path='/accounts' element={<HomeLayout children={<Accounts />}/>}></Route>
+          <Route path='/accounts/:id'  element={<HomeLayout children={<Account />}/>}></Route>
+          <Route path='/transactions/:id' element={<HomeLayout children={<Transaction />}/>}></Route>
+          <Route path='/transfer' element={<HomeLayout children={<Transfer />}/>}></Route>
+          {/* <Route path='/adminusers' element={<AdminUsers />}></Route>
+          <Route path='/adminaccounts' element={<AdminAccounts />}></Route> */}
         </Routes>
-      </BrowserRouter >    
-    </>
+      </BrowserRouter>
+      <Footer />
+    </div>
+
   );
 }
 
