@@ -1,6 +1,13 @@
 {
   "compilerOptions": {
     "target": "es5",
+    "module": "CommonJS",
+    "strict": true,
+    "jsx": "react"
+  },
+  "exclude": [
+    "node_modules"
+  ],
     "lib": [
       "dom",
       "dom.iterable",
