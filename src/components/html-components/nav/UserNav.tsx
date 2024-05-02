@@ -5,7 +5,7 @@ export default function UserNav() {
   return (
     <nav>
       <ul className="navbar">
-        <Link className="navbar-link" to="/">Login</Link>
+        <Link className="navbar-link" to="/login">Login</Link>
         <Link className="navbar-link" to="/dashboard">Dashboard</Link>
         {/* <Link to="/userprofile"></Link> */}
         <Link className="navbar-link" to="/accounts">Accounts</Link>

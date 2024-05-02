@@ -11,6 +11,8 @@ import Footer from './components/html-components/footer/Footer';
 import Header from './components/html-components/header/header';
 import Account from './components/pages/accounts/[id]';
 import Transaction from './components/pages/transactions/[id]';
+import Login from './components/Login/login';
+import Register from './components/register/register.tsx';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path='/accounts/:id'  element={<HomeLayout children={<Account />}/>}></Route>
           <Route path='/transactions/:id' element={<HomeLayout children={<Transaction />}/>}></Route>
           <Route path='/transfer' element={<HomeLayout children={<Transfer />}/>}></Route>
+          <Route path='/login' element={<Login />}></Route>
+          <Route path='/register' element={<Register />}></Route>
           {/* <Route path='/adminusers' element={<AdminUsers />}></Route>
           <Route path='/adminaccounts' element={<AdminAccounts />}></Route> */}
         </Routes>
